@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;RB.java&apos; to &apos;sbi/src/main/java/testsel&apos;&#x0D;&#x0A;- Original project: &apos;FirstSelenium&apos;&#x0D;&#x0A;- Destination element: &apos;sbi/src/main/java/testsel&apos;&#x0D;&#x0A;- Original element: &apos;renewbuy.RB.java&apos;" description="Copy compilation unit" destination="=sbi/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;testsel" element1="/src&lt;renewbuy{RB.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1693585432262" units="1" version="1.0"/>
+</session>

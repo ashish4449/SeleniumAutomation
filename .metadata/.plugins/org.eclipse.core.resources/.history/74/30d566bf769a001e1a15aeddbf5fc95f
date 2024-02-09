@@ -1,0 +1,32 @@
+package pract9;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class P9 {
+
+	public static void main(String[] args) {
+		WebDriver d = new ChromeDriver();
+		d.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		d.get("https://rahulshettyacademy.com/AutomationPractice/");
+		
+		String mainOption=d.findElement(By.id("checkBoxOption2")).getText();
+		System.out.println(d.findElement(By.id("checkBoxOption2")).getText());
+		d.findElement(By.xpath("//input[@value='option2']")).click();
+		
+		WebElement Selec=d.findElement(By.id("dropdown-class-example"));
+		
+		Select s = new Select(Selec);
+		
+		
+		s.selectByValue(mainOption);
+		
+
+	}
+
+}

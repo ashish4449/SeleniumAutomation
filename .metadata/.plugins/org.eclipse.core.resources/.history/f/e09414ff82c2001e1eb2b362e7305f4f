@@ -1,0 +1,27 @@
+import java.util.Optional;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.v119.network.Network;
+
+public class NetworkCDP {
+
+	public static void main(String[] args) {
+		
+		ChromeDriver driver= new ChromeDriver();
+		
+		DevTools tool=driver.getDevTools();
+		
+		tool.createSession();
+		
+		tool.send(Network.enable(Optional.<Integer> empty(), Optional.<Integer> empty(), Optional.<Integer> empty()));
+		
+		tool.addListener(Network.responseReceived(), response->
+		{
+			System.out.println(response.getResponse().getStatus()); 
+			
+		});
+
+	}
+
+}
